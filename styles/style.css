@@ -1,4 +1,4 @@
-body{
+body {
   background-image: url(https://images.unsplash.com/photo-1607851555973-39e3fb1293ad?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fHdpVGNofGVufDB8MHwwfHw%3D&auto=format&fit=crop&w=500&q=60);
   background-position: center;
   background-size: cover;
@@ -6,42 +6,104 @@ body{
 }
 
 .title {
-font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  font-size: 60px;
-  color: azure;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 50px;
+  color: rgb(252, 252, 255);
   font-weight: bolder;
+  display: flex;
+  justify-content: center;
+  align-items: column;
+  text-shadow: 3px 2px 2px rgb(2, 2, 2);
 }
 
 .zodiac {
-  
-  
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 8px;
+
+  border: 2px solid rgb(14, 14, 14);
+  background-color: rgb(74, 86, 86);
+  padding: 10px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 8px;
+
+
+}
+
+.sign {
+
+  border: 2px solid rgb(70, 53, 53);
+  padding: 10px;
+  width: 200px;
+  height: 200px;
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  transition: all 0,5s ease-in-out;
+
+    animation: rotate-center 0.6s
   }
 
-  .sign {
-    width: 300px;
-    height: 300px;
-    background: rgba( 255, 255, 255, 0.25 );
-box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-backdrop-filter: blur( 4px );
--webkit-backdrop-filter: blur( 4px );
-border-radius: 10px;
-border: 1px solid rgba( 255, 255, 255, 0.18 );
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    transition: all 1s ease-in-out;
+  @keyframes rotate-center {
+    0% {
+      transform: rotate(0)
+    }
+
+    100% {
+      transform: rotate(360deg)
+    }
   }
 
-  .sign:hover{
-scale: 1.1;
-transition: all 1s ease-in-out;
-  }
-  p{
-    color: aliceblue;
-    font-size: 30px;
+
+.sign:hover {
+  scale: 1.1;
+  transition: all 1s ease-in-out;
+}
+
+p {
+
+  color: aliceblue;
+  border: 1px solid rgb(151, 145, 145);
+  font-size: medium;
+  background-color: rgb(38, 73, 73);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  font-size: 25px;
+
+
+}
+
+.description {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 0%;
+}
+
+@media only screen and (min-width: 768px) {
+  .description {
+    flex-direction: row;
+
 
   }
+}
+
+.fondo {
+  border: 2px solid rgb(14, 14, 14);
+  background-color: rgb(67, 58, 188);
+  padding: 0% 5%;
+
+
+}
+
+.fondo2 {
+  border: 2px solid rgb(14, 14, 14);
+  background-color: rgb(44, 40, 105);
+  padding: 0% 5%;
+}
